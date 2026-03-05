@@ -6,12 +6,12 @@
 
 ## What is Alpha Vault?
 
-**Alpha Vault** is Meteora’s new **stealth bundling** method for token launches. It ties an Alpha Vault to a Meteora DAMM v2 pool so liquidity is locked and early supporters (including dev wallets) can receive tokens at a single, fair price.
+**Alpha Vault** is Meteora’s new **stealth bundling** method for token launches. It ties an Alpha Vault to a Meteora pool—supporting **DAMM** and **DAMM v2**—so liquidity is locked and early supporters (including dev wallets) can receive tokens at a single, fair price.
 
 ### How it works
 
 1. **Pool + Alpha Vault**  
-   A DAMM v2 pool is created with Alpha Vault support (`CONNECT_ALPHA_VAULT_POOL=true`). The pool is linked to an Alpha Vault; liquidity in the pool can be locked.
+   A Meteora pool (DAMM or DAMM v2) is created with Alpha Vault support (`CONNECT_ALPHA_VAULT_POOL=true`). The pool is linked to an Alpha Vault; liquidity in the pool can be locked.
 
 2. **Early supporters**  
    Early supporter wallets (including multiple dev wallets) are connected to the same Alpha Vault. They are the only addresses that can participate in the initial distribution window.
@@ -24,7 +24,7 @@
 
 ### In this repo
 
-- **DAMM v2 launch** creates the pool with `hasAlphaVault: true` and optional liquidity lock.
+- Alpha Vault works with **DAMM** and **DAMM v2** pools. This bundler’s **DAMM v2 launch** creates a pool with `hasAlphaVault: true` and optional liquidity lock.
 - **Alpha Vault (FCFS)** creates a First-Come-First-Served vault for that pool with configurable depositing window, vesting (start/end), caps, and whitelist mode (permissionless, merkle, or authority).
 - Supporters deposit quote (e.g. WSOL/USDC) into the FCFS vault before the depositing deadline; tokens vest over the configured period.
 
@@ -52,7 +52,7 @@ Use `npm run mint:token` to:
 ## Alpha Vault (FCFS)
 
 Use `npm run create:alpha-vault:fcfs` to:
-- create FCFS (First-Come-First-Served) Alpha Vault for the DAMM v2 pool
+- create FCFS (First-Come-First-Served) Alpha Vault for a DAMM or DAMM v2 pool
 - use token mint from `TOKEN_MINT_OUTPUT_PATH`
 - use pool address from `POOL_OUTPUT_PATH`
 - write output JSON (`data/latest-alpha-vault.json`)

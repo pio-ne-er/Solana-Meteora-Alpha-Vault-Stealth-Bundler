@@ -1,0 +1,16 @@
+{
+  "alphaVaultAddress": "H7D4Qo322G7r6M8wVtvALjCu36gM5wY9rcGrJW4AstN1",
+  "poolAddress": "Bk1ShaHXuYAbtfeiMoH9riXtdovXhkc5wmU3R1QYm7zW",
+  "baseMint": "7XzeUxfoF2Gf7v3dQGdX38Kh5FYTLsPaq4iFWo8cxSfo",
+  "quoteMint": "So11111111111111111111111111111111111111112",
+  "quoteMintType": "WSOL",
+  "depositingPoint": "1772651268",
+  "startVestingPoint": "1772656666",
+  "endVestingPoint": "1772743066",
+  "maxDepositingCap": "1000000000",
+  "individualDepositingCap": "10000000",
+  "whitelistMode": "permissionless",
+  "txSignature": "46T8ZHJkv2e7uYhLYZCg3W5A6M7ooa7uSHDNZRi7rLm7DQ6x2K9aNt7wsC9wNvW7ddUCaEqak5PzUoHQQsBtcSxh",
+  "dryRun": false,
+  "createdAt": "2026-03-04T19:06:49.235Z"
+}

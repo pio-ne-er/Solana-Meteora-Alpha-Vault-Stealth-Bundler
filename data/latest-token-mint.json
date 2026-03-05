@@ -1,0 +1,11 @@
+{
+  "tokenMint": "7XzeUxfoF2Gf7v3dQGdX38Kh5FYTLsPaq4iFWo8cxSfo",
+  "tokenProgram": "TOKEN_2022",
+  "tokenName": "XD",
+  "tokenSymbol": "XD",
+  "tokenDecimals": 6,
+  "tokenInitialSupplyRaw": "1000000000000",
+  "metadataUri": "https://ipfs.io/ipfs/QmfZb5JqVwVd73joGxsmG4Gk1hc8soi8CQywpEM4WFJywG",
+  "imageIpfsUrl": "https://ipfs.io/ipfs/QmcgiBhctWtekS6rCRBSrwWYQWYdBvumUJ52SYfFnfupjp",
+  "createdAt": "2026-03-04T19:03:15.076Z"
+}

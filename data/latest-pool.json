@@ -1,0 +1,12 @@
+{
+  "poolAddress": "Bk1ShaHXuYAbtfeiMoH9riXtdovXhkc5wmU3R1QYm7zW",
+  "baseMint": "7XzeUxfoF2Gf7v3dQGdX38Kh5FYTLsPaq4iFWo8cxSfo",
+  "quoteMint": "So11111111111111111111111111111111111111112",
+  "quoteMintType": "WSOL",
+  "tokenMintOutputPath": "/root/work/Meteora-Alpha-Vault-Bundler/data/latest-token-mint.json",
+  "isAlphaVaultConnected": true,
+  "poolActivationPointTs": "1772656606",
+  "txSignature": "UAHihawYu1ZUnrTv4RzKg1RkXNYgA4GUgweiwgZ4XMtv1rqgqLNGMhmeGdsvnbqaSrUPcu4rLaRZGCCVagZoxRL",
+  "dryRun": false,
+  "createdAt": "2026-03-04T19:06:46.727Z"
+}

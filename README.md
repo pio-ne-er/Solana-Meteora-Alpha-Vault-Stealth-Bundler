@@ -4,11 +4,57 @@
 
 ---
 
+## Meteora token launch with Alpha Vault
+
+### Overview
+
+When you launch a token on Meteora, you can use **multiple wallets**—as many as you choose—to participate in the **initial distribution at one price** through an Alpha Vault. That lets you scale early quote in, widen holder count, and complete your planned allocation before unrelated traders can meaningfully react. The result is a more controlled opening: liquidity and holders look strong from day one, without parking the whole supply in a single “dev” wallet.
+
+### Why teams use this pattern
+
+- **Liquidity and optics** — Higher initial liquidity and a healthier starting market cap than a single-wallet buy often provide.
+- **Holder breadth** — Tokens spread across several addresses you control, instead of one obvious creator wallet.
+- **Sniping resistance** — The vault window and pool design narrow who can participate at the opening price, which reduces classic “snipe the pool” behavior from outsiders.
+- **On-chain analytics** — Flows that do not look like a single coordinated Jito-style buy cluster can **read cleaner on tools such as Bubblemaps** (fewer obvious linked wallets), which matters to traders who screen launches.
+
+### How it works (high level)
+
+1. **Prepare wallets** — Fund the accounts you want in the vault ahead of time.
+2. **Launch** — Open the pool with Alpha Vault support and the configured deposit / vesting rules.
+3. **Participate** — Those wallets deposit and receive allocation **at the same effective price**, per vault rules—not staggered entries at different prices.
+4. **Distribute** — Supply ends up across your planned wallets with the launch metrics you targeted.
+
+This repository automates the Meteora-side setup (pool, mint, FCFS Alpha Vault) so you can operationalize that flow end to end.
+
+### Compared with a Jito-style bundler
+
+| Topic | Jito bundle (typical) | Alpha Vault on Meteora |
+| --- | --- | --- |
+| Wallet count | Often capped by bundle size / complexity | **No fixed “bundle size” cap** in the same sense; you scale via vault participants |
+| Execution | Bundle landing can fail or reorder | **Simpler execution model** tied to vault + pool—no Jito tips |
+| Bubblemaps / clustering | Multiple buys in one block can **link wallets visually** | **Cleaner separation** on analyzers when the narrative is vault-based participation, not one atomic swap bundle |
+
+Exact on-chain fingerprints depend on how you operate wallets and fund them; Alpha Vault is built for **same-price, vault-scoped distribution** rather than a single multi-tx flash bundle.
+
+### Summary
+
+Alpha Vault on Meteora is a **controlled, efficient, and low-friction** way to bootstrap liquidity and holders at launch—while steering clear of common Jito bundle limits, tip costs, and the obvious “bundled buy” signature some scanners flag.
+
+### Example: live token and Bubblemaps
+
+**Token (Axiom):** [FLAG False Flag on Solana](https://axiom.trade/meme/2piaCW5TP5prcR6Xyvm6W7f17biZ1p9zfGYQPEVrtJSS?chain=sol)
+
+**Bubblemaps snapshot** — Top holders appear as **separate bubbles** without the transaction-link “spokes” that often appear when many wallets are funded and traded as one obvious cluster. LP (e.g. Meteora) typically shows as the largest holder; the rest trail in smaller, similar-sized slices—consistent with an intentional, non-single-wallet launch.
+
+![Bubblemaps example: disconnected top holders (Illustrative)](image/bubblemap-example.png)
+
+---
+
 ## What is Alpha Vault?
 
 **Alpha Vault** is Meteora’s new **stealth bundling** method for token launches. It ties an Alpha Vault to a Meteora pool—supporting **DAMM** and **DAMM v2**—so liquidity is locked and early supporters (including dev wallets) can receive tokens at a single, fair price.
 
-### How it works
+### Protocol mechanics
 
 1. **Pool + Alpha Vault**  
    A Meteora pool (DAMM or DAMM v2) is created with Alpha Vault support (`CONNECT_ALPHA_VAULT_POOL=true`). The pool is linked to an Alpha Vault; liquidity in the pool can be locked.

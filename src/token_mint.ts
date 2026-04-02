@@ -315,7 +315,7 @@ async function main(): Promise<void> {
     "TOKEN_DESCRIPTION",
     "Devnet token minted for Meteora DAMM v2 launch testing."
   );
-  const tokenImagePath = getEnvOrDefault("TOKEN_IMAGE_PATH", "image/XD.jpg");
+  const tokenImagePath = getEnvOrDefault("TOKEN_IMAGE_PATH", "image/1.jpg");
   const tokenSocialLinks = parseStringArray(getEnvOrDefault("TOKEN_SOCIAL_LINKS", "[]"));
   const tokenMintOutputPath = getEnvOrDefault("TOKEN_MINT_OUTPUT_PATH", DEFAULT_TOKEN_MINT_OUTPUT_PATH);
 

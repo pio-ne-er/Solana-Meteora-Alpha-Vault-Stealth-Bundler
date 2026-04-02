@@ -42,7 +42,7 @@ Alpha Vault on Meteora is a **controlled, efficient, and low-friction** way to b
 
 ### Example: live token and Bubblemaps
 
-**Token (Axiom):** [FLAG False Flag on Solana](https://axiom.trade/meme/2piaCW5TP5prcR6Xyvm6W7f17biZ1p9zfGYQPEVrtJSS?chain=sol)
+**Token (Axiom):** [Flag on Solana](https://axiom.trade/meme/2piaCW5TP5prcR6Xyvm6W7f17biZ1p9zfGYQPEVrtJSS?chain=sol)
 
 **Bubblemaps snapshot** — Top holders appear as **separate bubbles** without the transaction-link “spokes” that often appear when many wallets are funded and traded as one obvious cluster. LP (e.g. Meteora) typically shows as the largest holder; the rest trail in smaller, similar-sized slices—consistent with an intentional, non-single-wallet launch.
 
